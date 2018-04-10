@@ -1,17 +1,39 @@
 <script>
   $(document).ready(function() {
-
-    // below some ex of animation in jquery with animated css library
-    // $("button").addClass("animated bounce");
-    // $(".well").addClass("animated shake");
-    // $("#target3").addClass("animated fadeOut");
+    // Animation on button
+    $("button").addClass("animated bounce");
+    $(".well").addClass("animated shake");
+    $("#target3").addClass("animated fadeOut");
+    //  change css property
+    $("#target1").css("color", "red");
+    // disabling a button (grayed-out)
+    $("button").prop("disabled", true);
+    // remove class
+    $("button").removeClass("btn-default");
+    // remove element
+    $("#target4").remove();
+    // change text by adding a tag
+    $("h3").html("<em>jQuery Playground</em>");
+    // move elements
+    $("#target4").appendTo("#left-well");
+    // copy element and append
+    $("#target5").clone().appendTo("#left-well");
+    // give property to #left-well parent element
+    $("#left-well").parent().css("background-color", "blue");
+    // same for children element
+    $("#left-well").children().css("color", "blue");
+    // jQuery uses CSS Selectors to target elements. target:nth-child(n) css selector allows you to select all the nth elements with the target class or element type.
+    $(".target:nth-child(2)").addClass("animated bounce");
+    // target the element with an odd number
+    $(".target:odd").addClass("animated shake");
+    // anim on the body hinge= comme un cadre qui tombe sur l'axe haut gauche
+    $("body").addClass("animated hinge");
 
   });
 </script>
 
-
-
 <!-- Only change code above this line. -->
+
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
   <div class="row">
@@ -33,5 +55,3 @@
     </div>
   </div>
 </div>
-
-
